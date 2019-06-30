@@ -1,0 +1,64 @@
+[
+    {
+        "type": "group",
+        "text": "1주차",
+        "items": [
+            {
+                "type": "chapter",
+                "text": "1. HTML part 1",
+                "name": "html_1"
+            },
+            {
+                "type": "chapter",
+                "text": "2. HTML part 2",
+                "name": "html_2"
+            },
+            {
+                "type": "chapter",
+                "text": "3. CSS",
+                "name": "css_1"
+            },
+            {
+                "type": "chapter",
+                "text": "4. Javascript",
+                "name": "javascript"
+            },
+            {
+                "type": "chapter",
+                "text": "5. 게시판 만들기 (Front-end)",
+                "name": "board_front"
+            }
+        ]
+    },
+    {
+        "type": "group",
+        "text": "2주차",
+        "items": [
+            {
+                "type": "chapter",
+                "text": "1. HTTP 이해하기, Flask 기초",
+                "name": "http_flask"
+            },
+            {
+                "type": "chapter",
+                "text": "2. Template 엔진, 파일 활용",
+                "name": "template_file"
+            },
+            {
+                "type": "chapter",
+                "text": "3. 쿠키",
+                "name": "cookie"
+            },
+            {
+                "type": "chapter",
+                "text": "4. 게시판 만들기 (Back-end) part 1",
+                "name": "board_back_1"
+            },
+            {
+                "type": "chapter",
+                "text": "5. 게시판 만들기 (Back-end) part 2",
+                "name": "board_back_2"
+            }
+        ]
+    }
+]
