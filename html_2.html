@@ -1,0 +1,94 @@
+<h1>HTML Part 2</h1>
+
+<section>
+    <h2>텍스트 포매팅</h2>
+
+    <p>HTML에서는 아래 태그들을 통해 포매팅 할 수 있다.</p>
+    <ul>
+        <li>strong: 중요한 텍스트. 텍스트를 굵게 나타낸다.</li>
+        <li>em: 강조된 텍스트. 텍스트를 이탤릭체(기울임체)로 나타낸다.</li>
+        <li>del: 삭제된 텍스트. 텍스트에 취소선친다.</li>
+        <li>ins: 삽입된 텍스트. 텍스트에 밑줄을 긋는다.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>표 작성하기</h2>
+
+    <p>HTML에서 표는 table 태그를 통해서 작성할 수 있다.</p>
+    <p>table 태그 안에 tr 태그로 각 행을 만들고, tr 태그 안에 td 태그로 각 열을 만든다.</p>
+    <p>border 속성을 통해 테이블의 테두리를 지정할 수 있다.</p>
+    <iframe width="100%" height="300" src="//jsfiddle.net/bigmsh/7r0nfbyv/1/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+    <section>
+        <h3>셀 합치기</h3>
+        <p>테이블의 셀은 td 태그에 colspan, rowspan 속성을 지정하여 합칠 수 있다.</p>
+        <p>colspan 속성을 주면 해당 셀은 입력한 수만큼의 가로칸을 차지한다.</p>
+        <p>colspan 속성을 주면 해당 셀은 입력한 수만큼의 세로칸을 차지한다.</p>
+        <iframe width="100%" height="300" src="//jsfiddle.net/bigmsh/2kyvbaLr/3/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+        <section>
+            <h4>셀 합치기 실습</h4>
+            <iframe width="100%" height="220" src="//jsfiddle.net/bigmsh/pb4hz7Le/1/embedded/result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+            <iframe width="100%" height="200" src="//jsfiddle.net/bigmsh/z57tj4fs/2/embedded/result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        </section>
+    </section>
+</section>
+
+<section>
+    <h2>블록 요소와 인라인 요소</h2>
+
+    <p>
+        HTML 요소는 블록 요소와, 인라인 요소로 나눌 수 있다.
+        블록 요소는 한 줄을 통째로 차지하여 다른 요소와 같은 줄에 표시될 수 없는 요소이고,
+        인라인 요소는 현재 작성 중인 줄에 포함되어 다른 인라인 요소와 같은 줄에 표시될 수 있는 요소다.
+    </p>
+    <p>
+        지금까지 배운 요소들을 블록 요소와 인라인 요소로 구분하면 다음과 같다.
+    </p>
+
+    <p>블록 요소</p>
+    <ul>
+        <li>h1 ~ h6</li>
+        <li>p</li>
+        <li>ul, ol, li</li>
+    </ul>
+
+    <p>인라인 요소</p>
+    <ul>
+        <li>a</li>
+        <li>strong</li>
+        <li>em</li>
+        <li>del</li>
+        <li>ins</li>
+    </ul>
+
+    <iframe width="100%" height="300" src="//jsfiddle.net/bigmsh/0hkLugfr/1/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+    <section>
+        <h2>div 요소와 span 요소</h2>
+        <p>
+            위에 나열된 요소들은 각각의 의미와 용도가 있다.
+            예를 들어 p 요소 같은 경우, 한 문단을 나타내는 요소이다.
+            하지만 특별한 의미 없이 다른 요소나 데이터를 구분 지을 필요가 있는데,
+            이 때 사용하는 것이 div와 span 요소이다.
+        </p>
+        <p>div 요소는 블록 요소, span 요소는 인라인 요소다.</p>
+
+        <iframe width="100%" height="300" src="//jsfiddle.net/bigmsh/0gjL5ewq/1/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+    </section>
+</section>
+
+<section>
+    <h1>빈 요소</h1>
+
+    <p>
+        요소를 작성할 때, 반드시 닫는 태그를 통해 요소를 닫아주어야한다.
+        그렇지 않으면, 해당 태그 이후에 작성한 모든 내용이 해당 요소에 포함된다.
+    </p>
+    <p>
+        일부 다른 요소를 포함할 수 없는 요소는 닫는 태그를 생략하고 작성할 수 있는데,
+        이런 요소들을 빈 요소라고 한다. 대표적인 빈 요소로는 br 요소와 img 요소가 있다.
+    </p>
+    <iframe width="100%" height="150" src="//jsfiddle.net/bigmsh/vh6rmoy2/embedded/html/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+</section>
