@@ -1,0 +1,279 @@
+<h1>JavaScript</h1>
+<section>
+    <h2>JavaScript란?</h2>
+    <p>
+        JavaScript는 웹 브라우저에서 실행 가능한 프로그래밍 언어다.
+        주로 웹 문서에서 동적인 동작을 구현하는데 사용한다.
+    </p>
+
+    <iframe width="100%" height="300" src="//jsfiddle.net/bigmsh/bxomfc02/1/embedded/js,html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+    <p>간단한 자바스크립트 예제</p>
+</section>
+
+<section>
+    <h2>JavaScript 문법</h2>
+    <p>
+        JavaScript는 C언어의 문법과 유사하게 제작되었기에,
+        구문 뒤에 세미콜론(;)을 붙여서 작성하지만 필수는 아니다.
+    </p>
+    
+    <section>
+        <h3>변수</h3>
+        <p>
+            JavaScript의 변수는 변수에 값을 입력하면 변수가 생성되는 파이썬과 다르게,
+            선언과 초기화가 구분되어 있다.
+        </p>
+
+        <section>
+            <h4>변수 선언</h4>
+            <p>
+                변수 선언은 변수를 생성해주는 행동이다.
+                변수를 선언하면 메모리에 해당 변수를 위한 공간이 할당되고, 변수가 생성된다.                
+            </p>
+            <p>변수는 var 키워드와 let 키워드를 통해서 선언할 수 있다.</p>
+            <iframe width="100%" height="300" src="//jsfiddle.net/bigmsh/r8wxjzL5/1/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        </section>
+
+        <section>
+            <h4>var 변수</h4>
+            <p>
+                var 변수는 함수 단위로 할당되는 지역변수다.
+                var 키워드로 생성한 변수는 생성한 함수 어디서 선언하더라도,
+                이후에 사용 가능하다.
+            </p>
+
+            <iframe width="100%" height="300" src="//jsfiddle.net/bigmsh/sfxbpu7L/2/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        </section>
+
+        <section>
+            <h4>let 변수</h4>
+            <p>
+                let 변수는 블록({}) 단위로 할당되는 지역변수다.
+                let 키워드로 생성한 변수는 생성한 블록에서만 사용 가능하다.
+            </p>
+
+            <iframe width="100%" height="300" src="//jsfiddle.net/bigmsh/guv2tx1c/2/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        </section>
+
+        <section>
+            <h4>선언 없이 사용</h4>
+            <p>
+                변수를 선언하지 않고 사용하면, 해당 변수는 전역 변수로 설정되어 어디서든 사용 가능하다.
+            </p>
+
+            <iframe width="100%" height="150" src="//jsfiddle.net/bigmsh/q2ajdshr/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        </section>
+    </section>
+
+    <section>
+        <h3>자료형</h3>
+        
+        <section>
+            <h4>숫자형(Number)</h4>
+            <p>JavaScript의 숫자형은 정수형과 실수형의 구분이 없다.</p>
+            <iframe width="100%" height="150" src="//jsfiddle.net/bigmsh/st7pnhrm/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        </section>
+
+        <section>
+            <h4>불(Boolean)</h4>
+            <p>JavaScript의 불은 true, false로 모든 문자를 소문자로 작성한다.</p>
+        </section>
+
+        <section>
+            <h4>문자열(String)</h4>
+            <p>JavaScript의 문자열은 큰 따옴표("") 혹은 작은 따옴표('')를 통해 작성한다.</p>
+            <iframe width="100%" height="300" src="//jsfiddle.net/bigmsh/96ukdjv7/1/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        </section>
+
+        <section>
+            <h4>객체(Object)</h4>
+            <p>
+                JavaScript의 객체는 클래스를 통해 생성할 수도 있고,
+                클래스 없이 생성할 수도 있다.
+                JavaScript의 객체는 Key-Value 구조로 파이썬의 딕셔너리와 유사하다.
+            </p>
+            <p>
+                객체의 Key를 통해 값을 얻고자 할 때는, 온점(.)을 사용하는 방법과,
+                대괄호([])를 사용하는 방법이 있다.
+            </p>
+            <iframe width="100%" height="150" src="//jsfiddle.net/bigmsh/e5xdryf6/1/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        </section>
+
+        <section>
+            <h4>배열(Array)</h4>
+            <p>
+                여러 값을 갖는 자료형이다.
+                length 속성을 통해 크기를 알 수 있다.
+            </p>
+            <iframe width="100%" height="150" src="//jsfiddle.net/bigmsh/96txzweh/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        </section>
+    </section>
+
+    <section>
+        <h3>주석</h3>
+        <p>
+            한 줄 주석은 슬래시(/)를 두개 입력하여 // 로 작성하고,
+            여러 줄 주석은 /* 을 통해 열고, */ 를 통해 닫는다.
+        </p>
+        <iframe width="100%" height="300" src="//jsfiddle.net/bigmsh/617k25ng/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+    </section>
+
+    <section>
+        <h3>숫자 연산자</h3>
+        <p>
+            덧셈, 뺄셈, 곱셈, 나눗셈은 각각 +, -, *, / 를 통해 한다.
+        </p>
+        <p>
+            가산, 감산 연산은 각각 +=, -= 을 통해 한다.
+        </p>
+        <p>
+            ++, -- 연산자를 통해 변수의 값을 1 증가, 감소 시킬 수 있다.
+        </p>
+        <iframe width="100%" height="300" src="//jsfiddle.net/bigmsh/1epbjLvx/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+    </section>
+
+    <section>
+        <h3>문자열 합치기</h3>
+        <p>
+            여러 문자열을 + 연산자를 통해 합칠 수 있으며,
+            숫자형과 + 연산자를 사용할 경우, 숫자 데이터가 문자열로 변환된다.
+            <iframe width="100%" height="100" src="//jsfiddle.net/bigmsh/9Lz2yrjb/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        </p>
+    </section>
+
+    <section>
+        <h3>비교 연산자</h3>
+        <ul>
+            <li>== : 값이 일치하면 true</li>
+            <li>=== : 값과 자료형이 일치하면 true</li>
+            <li>!= : 값이 다르면 true</li>
+            <li>!== : 값과 타입 중 하나라도 다르면 true</li>
+            <li>&lt; : 왼쪽이 크면 true</li>
+            <li>&gt; : 오른쪽이 크면 true</li>
+            <li>&lt;= : 왼쪽이 오른쪽보다 크거나 같으면 true</li>
+            <li>&gt;= : 오른쪽이 왼쪽보다 크거나 같으면 true</li>
+        </ul>
+        <iframe width="100%" height="300" src="//jsfiddle.net/bigmsh/Lw7amghe/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+    </section>
+
+    <section>
+        <h3>조건문</h3>
+        
+        <section>
+            <h4>if문</h4>
+            <iframe width="100%" height="300" src="//jsfiddle.net/bigmsh/w3n5e7db/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        </section>
+    </section>
+
+    <section>
+        <h3>반복문</h3>
+        
+        <section>
+            <h4>while문</h4>
+            <iframe width="100%" height="150" src="//jsfiddle.net/bigmsh/pv634Lk2/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        </section>
+
+        <section>
+            <h4>for문</h4>
+            <p>
+                JavaScript의 for문은 파이썬의 for문과 다르다.
+                JavaScript의 for문은 리스트나 range를 순회하는 것이 아닌,
+                조건과 연산을 반복하여 동작한다.
+                JavaScript의 for문은 초기식, 조건식, 반복식으로 이루어져 있다.
+            </p>
+            <ul>
+                <li>초기식: for문을 실행할 때, 처음 한 번만 실행하는 식</li>
+                <li>조건식: for문의 실행문을 실행할지 말지 결정하는 조건</li>
+                <li>반복식: for문의 실행문을 실행하고 반복하기 전, 실행되는 식</li>
+            </ul>
+
+            <p>
+                for 문이 실행되면 초기식-조건식-실행문-반복식-조건식-실행문-반복식-조건식-실행문-반복식-…-
+                과 같은 순서로 반복하고 조건식에서 false 값이 나오면 종료된다.
+            </p>
+
+            <iframe width="100%" height="150" src="//jsfiddle.net/bigmsh/76n3dL2p/1/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        </section>
+
+        <p>JavaScript에서도 파이썬과 마찬가지로 break, continue 사용이 가능하다.</p>
+    </section>
+
+    <section>
+        <h3>함수</h3>
+        <p>
+            함수는 function 키워드를 통해서 작성하며,
+            함수 이름과 괄호 안에 매개변수를 입력하여 작성한다.
+        </p>
+        <iframe width="100%" height="150" src="//jsfiddle.net/bigmsh/7mhb8eg5/embedded/js/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+    </section>
+</section>
+
+<section>
+    <h2>문서 로드 시 실행</h2>
+    <p>
+        HTML 문서가 로드될 때, 즉 웹 페이지을 열면 코드를 실행하고자 할 때는,
+        DOMContentLoaded 이벤트 리스너를 등록시켜줘야 한다.
+    </p>
+    <iframe width="100%" height="150" src="//jsfiddle.net/bigmsh/6qe41nfu/embedded/js,html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+</section>
+
+<section>
+    <h2>DOM</h2>
+    <p>
+        DOM(Document Object Model)은 HTML 문서를 객체화하여, JavaScript 등의 스크립트 언어에서
+        사용 가능하도록 만든 것이다.
+    </p>
+
+    <section>
+        <h3>ID를 통한 요소 선택</h3>
+        <p>
+            document.getElementById(id)는 id 값을 통해 요소를 선택하여 반환한다.
+        </p>
+        <iframe width="100%" height="150" src="//jsfiddle.net/bigmsh/bs5j97xk/2/embedded/js,html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+    </section>
+
+    <section>
+        <h3>태그 이름을 통한 요소 배열 선택</h3>
+        <p>
+            document.getElementsByTagName(name)은 태그 이름을 통해 요소를 선택하여 배열로 반환한다.
+        </p>
+        <iframe width="100%" height="300" src="//jsfiddle.net/bigmsh/msh9jkpb/1/embedded/js,html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+    </section>
+
+    <section>
+        <h3>클래스 이름을 통한 요소 배열 선택</h3>
+        <p>
+            document.getElementsByClassName(name)은 태그 이름을 통해 요소를 선택하여 배열로 반환한다.
+        </p>
+        <iframe width="100%" height="300" src="//jsfiddle.net/bigmsh/1phfveay/1/embedded/js,html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+    </section>
+
+    <section>
+        <h3>CSS 선택자를 통한 요소 선택</h3>
+        <p>
+            document.querySelector(selector)은 CSS 선택자를 통해 요소를 선택하여 반환한다.
+        </p>
+        <p>
+            document.querySelectorAll(selector)은 CSS 선택자를 통해 요소를 선택하여 배열로 반환한다.
+        </p>
+        <iframe width="100%" height="300" src="//jsfiddle.net/bigmsh/7e9dop05/2/embedded/js,html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+    </section>
+
+    <section>
+        <h3>innerHTML 속성</h3>
+        <p>요소 객체의 innerHTML 속성을 통해 요소 내부의 HTML 값을 바꿀 수 있다.</p>
+        <iframe width="100%" height="150" src="//jsfiddle.net/bigmsh/L4msgf8c/1/embedded/js,html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+    </section>
+
+    <section>
+        <h3>classList 속성</h3>
+        <p>요소 객체의 classList 속성을 통해 요소가 가지고 있는 클래스를 다룰 수 있다.</p>
+        <iframe width="100%" height="300" src="//jsfiddle.net/bigmsh/7qhgjz0o/1/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+    </section>
+</section>
+
+<section>
+    <h3>onclick 이벤트</h3>
+    <p>onclick 이벤트를 사용하여 요소가 클릭되었을 때, 함수를 실행하도록 할 수 있다.</p>
+    <iframe width="100%" height="300" src="//jsfiddle.net/bigmsh/y0v9dat8/3/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+</section>
