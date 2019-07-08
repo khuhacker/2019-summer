@@ -1,0 +1,149 @@
+<h1>Template 엔진, 파일 활용</h1>
+<section>
+    <h2>Template 엔진</h2>
+    <p>
+        동적인 웹 페이지를 구성하기 위해서,
+        파이썬 코드에서 HTML을 문자열로 작성해주면, 여러모로 불편하다.
+        코드가 길어지고, HTML 에디터를 사용할 수 없는 등의 문제가 발생한다.
+        이러한 문제를 해결하기 위해, 별도의 파일에 동적 페이지를 작성하는
+        템플릿을 작성하는데 이러한 템플릿을 읽어서 사용할 수 있도록 해주는
+        프레임워크를 Template 엔진이라고 한다.
+    </p>
+    <p>
+        예를 들어 지난 시간에 만든 입력한 검색어를 띄워주는
+        페이지를 살펴보자.
+    </p>
+    <pre><code class="python">from flask import Flask, request
+app = Flask(__name__)
+
+@app.route("/get")
+def get():
+    keyword = ""
+    if 'keyword' in request.args:
+        keyword = request.args['keyword']
+
+    return """
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8" /&gt;
+            &lt;title&gt;&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            """ + keyword + """
+            &lt;form method="GET"&gt;
+                &lt;input type="text" name="keyword" /&gt;
+                &lt;input type="submit" value="검색" /&gt;
+            &lt;/form&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+    """</code></pre>
+
+    <p>
+        이렇게 파이썬 코드 상에 HTML 코드를 작성하면,
+        가독성도 떨어지고 불편하다. 이를 Template 엔진을 사용하면
+        훨씬 효율적으로 동적 페이지를 작성할 수 있다.
+    </p>
+
+    <p>우선 templates 폴더에 keyword.html 파일을 만든다.</p>
+    <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8" /&gt;
+        &lt;title&gt;&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        {{ keyword }}
+        &lt;form method="GET"&gt;
+            &lt;input type="text" name="keyword" /&gt;
+            &lt;input type="submit" value="검색" /&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <p>app.py 파일을 다음과 같이 수정한다.</p>
+    <pre><code class="python">from flask import Flask, request, render_template
+app = Flask(__name__)
+
+@app.route('/get')
+def get():
+    keyword = ""
+    if 'keyword' in request.args:
+        keyword = request.args['keyword']
+
+    return render_template('keyword.html', keyword=keyword)</code></pre>
+
+    <p>
+        위 코드처럼 템플릿 문서에서 사용할 변수를 render_template 함수의
+        옵션으로 지정해준다.
+    </p>
+
+    <section>
+        <h3>if문</h3>
+
+        <p>templates/even_odd.html</p>
+        <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8" /&gt;
+        &lt;title&gt;&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        {% if n % 2 == 0 %}
+            짝수
+        {% else %}
+            홀수
+        {% endif %}
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <p>app.py</p>
+        <pre><code class="python">from flask import Flask, request, render_template
+app = Flask(__name__)
+
+@app.route('/<num>')
+def evenOdd(num):
+    return render_template('even_odd.html', n=int(num))</code></pre>
+    </section>
+
+    <section>
+        <h3>for문</h3>
+
+        <p>templates/people.html</p>
+        <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8" /&gt;
+        &lt;title&gt;&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;사람들&lt;/h1&gt;
+        &lt;ul&gt;
+            {% for person in people %}
+                &lt;li&gt;{{ person.name }}({{ person.age }})&lt;/li&gt;
+            {% endfor %}
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <p>app.py</p>
+        <pre><code class="python">from flask import Flask, request, render_template
+app = Flask(__name__)
+
+@app.route('/')
+def info():
+    return render_template('people.html', people=[
+        {'name': '권형진', 'age': 27},
+        {'name': '이규호', 'age': 24},
+        {'name': '정승우', 'age': 19}
+    ])</code></pre>
+    </section>
+    
+</section>
+
+<section>
+    <h2>파일 입출력</h2>
+    <p>
+        Flask에서 파일 입출력은 파이썬에서의 파일 입출력과 동일하다.
+    </p>
+</section>
